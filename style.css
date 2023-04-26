@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-weight: 500;
+    color: #061826;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: lightgray;
+    color: #061826;
+    padding: 25px;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* WHICH TEST SHOULD I USE? */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 120px);
+}
+
+#container {
+    width: 65%;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+    padding: 25px;
+}
+
+#container h2 {
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+#container #top {
+    padding-bottom: 15px;
+}
+
+.changeable-text {
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+#choices input, #choices label {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type='radio'] {
+    accent-color: #ff521b;
+}
+
+form button {
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #ff521b;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: filter 400ms;
+}
+
+#skip-button {
+    background-color: #f18805;
+    margin-left: 5px;
+}
+
+form button:hover {
+    filter: brightness(0.85);
+}
