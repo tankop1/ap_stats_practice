@@ -12,6 +12,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
     <title>Mr. Belin's Stats Review</title>
 </head>
 <body>
@@ -75,13 +80,53 @@
                 <div id="form-buttons">
                     <button id="answer-button">Check Answer</button>
                     <button id="skip-button">Skip ></button>
+                    <p id="response"></p>
                 </div>
             </form>
         </section>
     </main>
 
+    <section id="password-page">
+        <div id="password-container">
+            <input type="password" placeholder="Password" id="password" />
+            <button id="password-enter">Enter</button>
+        </div>
+
+        <div id="secret-page">
+            <button id="back">< Back</button>
+
+            <h2>Secret AP Statistics Vault</h2>
+
+            <div id="files">
+                <article class="file">
+                    <h4 class="file-name">File #1</h4>
+                </article>
+
+                <article class="file">
+                    <h4 class="file-name">File #2</h4>
+                </article>
+
+                <article class="file">
+                    <h4 class="file-name">File #3</h4>
+                </article>
+
+                <article class="file">
+                    <h4 class="file-name">File #4</h4>
+                </article>
+
+                <article class="file">
+                    <h4 class="file-name">File #5</h4>
+                </article>
+
+                <article class="file">
+                    <h4 class="file-name">File #6</h4>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>Created for Mr. Belin by his favorite student</p>
+        <p>Created for Mr. <button class="hidden-button" id="secret-button">B</button>elin by his favorite student</p>
     </footer>
 
     <script src="script.js"></script>
