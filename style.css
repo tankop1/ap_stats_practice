@@ -245,9 +245,32 @@ form button:hover {
     margin-right: 20px;
     margin-top: 100px;
     cursor: pointer;
-    background-image: url(assets/APStatsFormula.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.file:nth-of-type(1) {
+    background-image: url(assets/APStatsFormula.jpg);
+}
+
+.file:nth-of-type(2) {
+    background-image: url(assets/Cheatsheet.webp);
+}
+
+.file:nth-of-type(3) {
+    background-image: url(assets/Cheet\ Sheet\ 2.webp);
+}
+
+.file:nth-of-type(4) {
+    background-image: url(assets/Cheat\ Sheet\ 3.jpg);
+}
+
+.file:nth-of-type(5) {
+    background-image: url(assets/Calculator\ Cheet\ Sheet.png);
+}
+
+.file:nth-of-type(6) {
+    background-image: url(assets/Sampling\ Distributions\ Cheet\ Sheet.png);
 }
 
 .file-name {
@@ -264,4 +287,65 @@ form button:hover {
 
 .file:hover .file-name {
     height: 100%;
+}
+
+/* MEDIA QUERIES (HEIGHT) */
+
+@media only screen and (max-height: 750px) {
+    main
+    {
+        overflow-y: scroll;
+    }
+
+    #container {
+        margin-top: 200px;
+        margin-bottom: 75px;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #container {
+        margin-top: 300px;
+    }
+}
+
+@media only screen and (max-height: 625px) {
+    #container {
+        margin-top: 400px;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    #container {
+        margin-top: 450px;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    #container {
+        margin-top: 500px;
+    }
+}
+
+/* MEDIA QUERIES (WIDTH) */
+
+@media only screen and (max-width: 1000px) {
+    #container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    #container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    #container {
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin-bottom: 150px;
+    }
 }

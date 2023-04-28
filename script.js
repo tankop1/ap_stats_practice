@@ -74,7 +74,7 @@ function ShowPasswordPage()
 function CheckPassword()
 {
     let currentPassword = $('#password').val();
-    let actualPassword = 'password';
+    let actualPassword = 'belinrocks';
 
     return currentPassword == actualPassword;
 }
@@ -88,6 +88,7 @@ function ShowSecretPage()
         secretPage.css({'left': '0'});
         passwordContainer.css({'margin-right': '250%'});
         backButton.css({'display': 'block'});
+        SetupDownloadLinks();
     }
 
     else
@@ -121,3 +122,15 @@ $('#password').keypress(event => {
 		ShowSecretPage();
 	}
 });
+
+let downloadLinks = ['https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.prepscholar.com%2Fap-statistics-formula-sheet&psig=AOvVaw0Hf8Cjx67ZIw7gsVxrkNAj&ust=1682793996090000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJi1oaaezf4CFQAAAAAdAAAAABAJ', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcheatography.com%2Fprincessb3ll3%2Fcheat-sheets%2Fap-stat-test%2F&psig=AOvVaw1KGDtRb5bTd0zXh-fBiJGD&ust=1682792964172000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj1g9mdzf4CFQAAAAAdAAAAABA7', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcheatography.com%2Fgsarkar%2Fcheat-sheets%2Fap-stats-chapter-10%2F&psig=AOvVaw1KGDtRb5bTd0zXh-fBiJGD&ust=1682792964172000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj1g9mdzf4CFQAAAAAdAAAAABAz', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dummies.com%2Farticle%2Facademics-the-arts%2Fmath%2Fstatistics%2Fstatistics-for-dummies-cheat-sheet-208650%2F&psig=AOvVaw1KGDtRb5bTd0zXh-fBiJGD&ust=1682792964172000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj1g9mdzf4CFQAAAAAdAAAAABAb', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fstudylib.net%2Fdoc%2F10089718%2Fcalculator-cheat-sheet&psig=AOvVaw1KGDtRb5bTd0zXh-fBiJGD&ust=1682792964172000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj1g9mdzf4CFQAAAAAdAAAAABAT', 'https://s3.studylib.net/store/data/008754176_1-0dfb2a40674ccba59ec489f30567bb46.png'];
+
+function SetupDownloadLinks()
+{
+    $('.file').each((index, element) => {
+        $(element).click(() => {
+            //window.location.href = downloadLinks[index];
+            window.open(downloadLinks[index], "_blank");
+        });
+    });
+}
