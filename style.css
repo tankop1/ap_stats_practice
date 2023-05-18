@@ -47,6 +47,15 @@ footer {
     cursor: text;
 }
 
+#initial-password-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-left 500ms;
+}
+
 /* WHICH TEST SHOULD I USE? */
 
 main {
@@ -54,6 +63,11 @@ main {
     align-items: center;
     justify-content: center;
     height: calc(100% - 120px);
+}
+
+#main-container {
+    margin-left: -1000px;
+    transition: margin-left 500ms;
 }
 
 .container {
@@ -139,7 +153,7 @@ form button:hover {
     justify-content: center;
 }
 
-#password-container {
+.password-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +175,21 @@ form button:hover {
     border-radius: 5px;
 }
 
-#password-enter {
+#initial-password {
+    padding: 8px 15px;
+    border: 1px solid lightgray;
+    background-color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    width: 300px;
+    height: 45px;
+    outline-color: #ff521b;
+    outline-offset: 3px;
+    outline-width: thick;
+    border-radius: 5px;
+}
+
+.password-enter {
     height: 45px;
     width: 65px;
     border: none;
@@ -175,7 +203,7 @@ form button:hover {
     margin-left: 12px;
 }
 
-#password-enter:hover {
+.password-enter:hover {
     filter: brightness(0.85);
 }
 

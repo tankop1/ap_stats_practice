@@ -9,6 +9,9 @@ let passwordContainer = $('#password-container');
 let secretPage = $('#secret-page');
 let backButton = $('#back');
 let forceAnswerButton = $('#force-answer');
+let initialPasswordEnterButton = $('#password-enter-initial');
+let initialPasswordContainer = $('#initial-password-container');
+let mainContainer = $('#main-container');
 
 let forceRightAnswer = false;
 
@@ -77,7 +80,7 @@ function ShowPasswordPage()
 function CheckPassword()
 {
     let currentPassword = $('#password').val();
-    let actualPassword = 'belinrocks';
+    let actualPassword = 'belinrocks!';
 
     return currentPassword == actualPassword;
 }
@@ -150,3 +153,29 @@ function SetForceAnswer()
 }
 
 forceAnswerButton.click(SetForceAnswer);
+
+function CheckInitialPassword()
+{
+    let currentInitialPassword = $('#initial-password').val();
+    let actualInitialPassword = 'belinrocks';
+
+    return currentInitialPassword == actualInitialPassword;
+}
+
+function ShowMainPage()
+{
+    let isValidPassword = CheckInitialPassword();
+
+    if (isValidPassword)
+    {
+        mainContainer.css({'margin-left': '0'});
+        initialPasswordContainer.css({'display': 'none'});
+    }
+
+    else
+    {
+        alert("Incorrect Password");
+    }
+}
+
+initialPasswordEnterButton.click(ShowMainPage);
